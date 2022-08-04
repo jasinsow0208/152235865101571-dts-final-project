@@ -32,19 +32,19 @@ const EditFixedAssets = (props) => {
     console.log("Data:", data);
   }, [props.Data]); // eslint-disable-line
 
-  // useEffect(() => {
-  //   setCode(data.FixedAssetCode);
-  //   setDescription(data.Description);
-  //   setLocation(data.Location);
-  //   setAmount(data.Amount);
-  //   setPurchaseDate(data.PUrchaseDate);
+  useEffect(() => {
+    setCode(data.FixedAssetCode);
+    // setDescription(data.Description);
+    // setLocation(data.Location);
+    // setAmount(data.Amount);
+    // setPurchaseDate(data.PUrchaseDate);
 
-  //   console.log("Code", code);
-  //   console.log("Description", description);
-  //   console.log("Location", location);
-  //   console.log("Amount", amount);
-  //   console.log("Purchase Date", purchaseDate);
-  // }, [props.Data]); // eslint-disable-line
+    console.log("Code", code);
+    // console.log("Description", description);
+    // console.log("Location", location);
+    // console.log("Amount", amount);
+    // console.log("Purchase Date", purchaseDate);
+  }, [props.Data]); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
     navigate("/");
@@ -116,7 +116,7 @@ const EditFixedAssets = (props) => {
               id={1}
               sx={{ width: 300 }}
               variant="outlined"
-              value={data.FixedAssetCode}
+              value={code}
               onChange={handleChangeCode}
             />
           </Grid>

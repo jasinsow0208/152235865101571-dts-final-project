@@ -28,12 +28,15 @@ const EditFixedAssets = (props) => {
   const loc = ["Cianjur", "Cikampek", "Jakarta", "Pontianak", "Surabaya"];
 
   useEffect(() => {
-    setData(props.Data);
-    setCode(data.FixedAssetCode);
-    setDescription(data.Description);
-    setLocation(data.Location);
-    setAmount(data.Amount);
-    setPurchaseDate(data.PUrchaseDate);
+    function setAllData() {
+      setData(props.Data);
+      setCode(data.FixedAssetCode);
+      setDescription(data.Description);
+      setLocation(data.Location);
+      setAmount(data.Amount);
+      setPurchaseDate(data.PUrchaseDate);
+    }
+    setAllData();
   }, [props.Data]);
 
   const btnOnClickCancelHandler = () => {
@@ -137,12 +140,6 @@ const EditFixedAssets = (props) => {
                 <TextField {...params} label="Location" />
               )}
             />
-            {/* <TextField
-              id={props.Data.FixedAssetId}
-              variant="outlined"
-              value={location}
-              onChange={handleChangeLocation}
-            /> */}
           </Grid>
           <Grid item xs={2} alignContent="flex-end">
             <Typography variant="body1">Amount:</Typography>

@@ -1,0 +1,18 @@
+.boxy {
+  border: 1px dashed grey;
+  background-color: #2596be;
+  color: aliceblue;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5em;
+  gap: 1em;
+  z-index: 2;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}

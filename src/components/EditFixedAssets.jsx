@@ -34,10 +34,10 @@ const EditFixedAssets = (props) => {
 
   useEffect(() => {
     setCode(data.FixedAssetCode);
-    // setDescription(data.Description);
-    // setLocation(data.Location);
-    // setAmount(data.Amount);
-    // setPurchaseDate(data.PUrchaseDate);
+    setDescription(data.Description);
+    setLocation(data.Location);
+    setAmount(data.Amount);
+    setPurchaseDate(data.PUrchaseDate);
 
     console.log("Code", code);
     // console.log("Description", description);
@@ -128,7 +128,7 @@ const EditFixedAssets = (props) => {
               id={2}
               sx={{ width: 300 }}
               variant="outlined"
-              value={data.Description}
+              value={description}
               onChange={handleChangeDescription}
             />
           </Grid>
@@ -137,7 +137,7 @@ const EditFixedAssets = (props) => {
           </Grid>
           <Grid item xs={10}>
             <Autocomplete
-              value={data.Location}
+              value={location}
               onChange={(event, newValue) => {
                 setLocation(newValue);
               }}
@@ -159,7 +159,7 @@ const EditFixedAssets = (props) => {
               id={3}
               sx={{ width: 300 }}
               variant="outlined"
-              value={data.Amount}
+              value={amount}
               onChange={handleChangeAmount}
             />
           </Grid>
@@ -172,7 +172,7 @@ const EditFixedAssets = (props) => {
                 label="Purchase date"
                 sx={{ width: 300 }}
                 type="date"
-                value={data.PUrchaseDate}
+                value={purchaseDate}
                 onChange={(newValue) => {
                   setPurchaseDate(newValue);
                 }}

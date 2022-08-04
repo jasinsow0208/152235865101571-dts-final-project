@@ -48,7 +48,7 @@ const EditFixedAssets = (props) => {
       await Axios({
         method: "POST",
         headers: { "Content-type": "application/json" },
-        url: `http://jasinsowandi-001-site5.btempurl.com/api/values?FixedAssetCode=${code}&Description=${description}&Location=${location}&Amount=${amount}&PurchaseDate=${
+        url: `https://famanagement.azurewebsites.net/api/Values?FixedAssetCode=${code}&Description=${description}&Location=${location}&Amount=${amount}&PurchaseDate=${
           typeof purchaseDate === "object"
             ? purchaseDate.toLocaleDateString("en-CA")
             : purchaseDate

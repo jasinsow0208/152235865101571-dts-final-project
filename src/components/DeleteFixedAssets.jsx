@@ -20,7 +20,7 @@ const DeleteFixedAssets = (props) => {
       await Axios({
         method: "POST",
         headers: { "Content-type": "application/json" },
-        url: `http://jasinsowandi-001-site5.btempurl.com/api/values/${data.FixedAssetId}`,
+        url: `https://famanagement.azurewebsites.net/api/Values/${data.FixedAssetId}`,
         withCredentials: false,
       });
     } catch (error) {

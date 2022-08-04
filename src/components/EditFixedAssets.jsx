@@ -28,15 +28,13 @@ const EditFixedAssets = (props) => {
   const loc = ["Cianjur", "Cikampek", "Jakarta", "Pontianak", "Surabaya"];
 
   useEffect(() => {
-    function setAllData() {
-      setData(props.Data);
-      setCode(data.FixedAssetCode);
-      setDescription(data.Description);
-      setLocation(data.Location);
-      setAmount(data.Amount);
-      setPurchaseDate(data.PUrchaseDate);
-    }
-    setAllData();
+    setData(props.Data);
+    setCode(data.FixedAssetCode);
+    setDescription(data.Description);
+    setLocation(data.Location);
+    setAmount(data.Amount);
+    setPurchaseDate(data.PUrchaseDate);
+
     console.log("Code", code);
     console.log("Description", description);
     console.log("Location", location);

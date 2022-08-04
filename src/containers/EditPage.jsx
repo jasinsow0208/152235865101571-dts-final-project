@@ -28,6 +28,7 @@ const EditPage = () => {
     };
 
     fetchData();
+    console.log("Dari EditPage:", fixedAsset);
   }, []); // eslint-disable-line
   return (
     <>

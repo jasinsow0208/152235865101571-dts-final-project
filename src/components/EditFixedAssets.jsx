@@ -38,7 +38,7 @@ const EditFixedAssets = (props) => {
     }
     setAllData();
     console.log("Data", props.Data);
-  }, []); // eslint-disable-line
+  }, [props]); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
     navigate("/");

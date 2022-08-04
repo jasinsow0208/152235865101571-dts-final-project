@@ -39,12 +39,12 @@ const EditFixedAssets = (props) => {
     setAmount(data.Amount);
     setPurchaseDate(data.PUrchaseDate);
 
-    console.log("Code", code);
+    //console.log("Code", code);
     // console.log("Description", description);
     // console.log("Location", location);
     // console.log("Amount", amount);
     // console.log("Purchase Date", purchaseDate);
-  }, [props.Data]); // eslint-disable-line
+  }, []); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
     navigate("/");

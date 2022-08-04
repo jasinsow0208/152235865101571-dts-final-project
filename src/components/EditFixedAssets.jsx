@@ -44,7 +44,7 @@ const EditFixedAssets = (props) => {
     console.log("Location", location);
     console.log("Amount", amount);
     console.log("Purchase Date", purchaseDate);
-  }, [props.Data]);
+  }, [props.Data]); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
     navigate("/");

@@ -37,7 +37,11 @@ const EditFixedAssets = (props) => {
       setPurchaseDate(data.PUrchaseDate);
     }
     setAllData();
-    console.log("Data", props.Data);
+    console.log("Code", code);
+    console.log("Description", description);
+    console.log("Location", location);
+    console.log("Amount", amount);
+    console.log("Purchase Date", purchaseDate);
   }, [props]); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
@@ -100,7 +104,7 @@ const EditFixedAssets = (props) => {
           </Grid>
           <Grid item xs={10}>
             <TextField
-              id={data.FixedAssetId}
+              id={1}
               label="Code"
               sx={{ width: 300 }}
               variant="outlined"
@@ -113,7 +117,7 @@ const EditFixedAssets = (props) => {
           </Grid>
           <Grid item xs={10}>
             <TextField
-              id={props.Data.FixedAssetId}
+              id={2}
               label="Description"
               sx={{ width: 300 }}
               variant="outlined"
@@ -147,7 +151,7 @@ const EditFixedAssets = (props) => {
           </Grid>
           <Grid item xs={10}>
             <TextField
-              id={props.Data.FixedAssetId}
+              id={3}
               label="Amount"
               sx={{ width: 300 }}
               variant="outlined"

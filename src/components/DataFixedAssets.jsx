@@ -29,7 +29,7 @@ const DataFixedAssets = (props) => {
   useEffect(() => {
     const dataQuery = filterData(searchQuery, props.Data);
     setFixedAssets(dataQuery);
-  }, [searchQuery]);
+  }, [searchQuery]); // eslint-disable-line
 
   const filterData = (query, data) => {
     if (!query) {

@@ -28,7 +28,7 @@ const EditPage = () => {
     };
 
     fetchData();
-  }, [params.id]);
+  });
   return (
     <>
       <NavBar />

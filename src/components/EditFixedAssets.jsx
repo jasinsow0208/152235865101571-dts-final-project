@@ -37,7 +37,8 @@ const EditFixedAssets = (props) => {
       setPurchaseDate(data.PUrchaseDate);
     }
     setAllData();
-  }, [props.Data]); // eslint-disable-line
+    console.log("Data", props.Data);
+  }, []); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
     navigate("/");

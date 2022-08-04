@@ -29,6 +29,10 @@ const EditFixedAssets = (props) => {
 
   useEffect(() => {
     setData(props.Data);
+    console.log("Data:", data);
+  }, [props.Data]); // eslint-disable-line
+
+  useEffect(() => {
     setCode(data.FixedAssetCode);
     setDescription(data.Description);
     setLocation(data.Location);
@@ -40,7 +44,7 @@ const EditFixedAssets = (props) => {
     console.log("Location", location);
     console.log("Amount", amount);
     console.log("Purchase Date", purchaseDate);
-  }, [props.Data]); // eslint-disable-line
+  }, [props.Data]);
 
   const btnOnClickCancelHandler = () => {
     navigate("/");

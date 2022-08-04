@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Grid,
   Box,
@@ -62,9 +62,6 @@ const AddFixedAssets = () => {
   };
   const handleChangeDescription = (event) => {
     setDescription(event.target.value);
-  };
-  const handleChangeLocation = (event) => {
-    setLocation(event.target.value);
   };
   const handleChangeAmount = (event) => {
     setAmount(event.target.value);

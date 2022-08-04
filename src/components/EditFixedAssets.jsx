@@ -68,14 +68,9 @@ const EditFixedAssets = (props) => {
   const handleChangeDescription = (event) => {
     setDescription(event.target.value);
   };
-  const handleChangeLocation = (event) => {
-    setLocation(event.target.value);
-  };
+
   const handleChangeAmount = (event) => {
     setAmount(event.target.value);
-  };
-  const handleChangePurchaseDate = (event) => {
-    setPurchaseDate(event.target.value);
   };
 
   console.log(props.Data);

@@ -9,7 +9,7 @@ const DeleteFixedAssets = (props) => {
 
   useEffect(() => {
     setData(props.Data);
-  }, [props]);
+  }, [props.Data]);
 
   const btnOnClickCancelHandler = () => {
     navigate("/");

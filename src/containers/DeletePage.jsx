@@ -28,7 +28,7 @@ const DeletePage = () => {
     };
 
     fetchData();
-  }, []);
+  }, []); // eslint-disable-line
   return (
     <>
       <NavBar />

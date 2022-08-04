@@ -28,7 +28,7 @@ const EditPage = () => {
     };
 
     fetchData();
-  }, []);
+  }, []); // eslint-disable-line
   return (
     <>
       <NavBar />

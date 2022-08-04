@@ -32,19 +32,19 @@ const EditFixedAssets = (props) => {
     console.log("Data:", data);
   }, [props.Data]); // eslint-disable-line
 
-  useEffect(() => {
-    setCode(data.FixedAssetCode);
-    setDescription(data.Description);
-    setLocation(data.Location);
-    setAmount(data.Amount);
-    setPurchaseDate(data.PUrchaseDate);
+  // useEffect(() => {
+  //   setCode(data.FixedAssetCode);
+  //   setDescription(data.Description);
+  //   setLocation(data.Location);
+  //   setAmount(data.Amount);
+  //   setPurchaseDate(data.PUrchaseDate);
 
-    console.log("Code", code);
-    console.log("Description", description);
-    console.log("Location", location);
-    console.log("Amount", amount);
-    console.log("Purchase Date", purchaseDate);
-  }, [props.Data]); // eslint-disable-line
+  //   console.log("Code", code);
+  //   console.log("Description", description);
+  //   console.log("Location", location);
+  //   console.log("Amount", amount);
+  //   console.log("Purchase Date", purchaseDate);
+  // }, [props.Data]); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
     navigate("/");
@@ -110,7 +110,7 @@ const EditFixedAssets = (props) => {
               label="Code"
               sx={{ width: 300 }}
               variant="outlined"
-              value={code}
+              value={data.FixedAssetCode}
               onChange={handleChangeCode}
             />
           </Grid>
@@ -123,7 +123,7 @@ const EditFixedAssets = (props) => {
               label="Description"
               sx={{ width: 300 }}
               variant="outlined"
-              value={description}
+              value={data.Description}
               onChange={handleChangeDescription}
             />
           </Grid>
@@ -132,7 +132,7 @@ const EditFixedAssets = (props) => {
           </Grid>
           <Grid item xs={10}>
             <Autocomplete
-              value={location}
+              value={data.Location}
               onChange={(event, newValue) => {
                 setLocation(newValue);
               }}
@@ -157,7 +157,7 @@ const EditFixedAssets = (props) => {
               label="Amount"
               sx={{ width: 300 }}
               variant="outlined"
-              value={amount}
+              value={data.Amount}
               onChange={handleChangeAmount}
             />
           </Grid>
@@ -170,7 +170,7 @@ const EditFixedAssets = (props) => {
                 label="Purchase date"
                 sx={{ width: 300 }}
                 type="date"
-                value={purchaseDate}
+                value={data.PUrchaseDate}
                 onChange={(newValue) => {
                   setPurchaseDate(newValue);
                 }}

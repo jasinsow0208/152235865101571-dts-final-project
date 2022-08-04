@@ -62,6 +62,13 @@ const EditFixedAssets = (props) => {
         }&id=${data.FixedAssetId}`,
         withCredentials: false,
       });
+      console.log(
+        `https://famanagement.azurewebsites.net/api/Values?FixedAssetCode=${code}&Description=${description}&Location=${location}&Amount=${amount}&PurchaseDate=${
+          typeof purchaseDate === "object"
+            ? purchaseDate.toLocaleDateString("en-CA")
+            : purchaseDate
+        }&id=${data.FixedAssetId}`
+      );
     } catch (error) {
       console.log(error);
     }
@@ -107,7 +114,6 @@ const EditFixedAssets = (props) => {
           <Grid item xs={10}>
             <TextField
               id={1}
-              label="Code"
               sx={{ width: 300 }}
               variant="outlined"
               value={data.FixedAssetCode}
@@ -120,7 +126,6 @@ const EditFixedAssets = (props) => {
           <Grid item xs={10}>
             <TextField
               id={2}
-              label="Description"
               sx={{ width: 300 }}
               variant="outlined"
               value={data.Description}
@@ -143,9 +148,7 @@ const EditFixedAssets = (props) => {
               id="combo-box"
               options={loc}
               sx={{ width: 300 }}
-              renderInput={(params) => (
-                <TextField {...params} label="Location" />
-              )}
+              renderInput={(params) => <TextField {...params} />}
             />
           </Grid>
           <Grid item xs={2} alignContent="flex-end">
@@ -154,7 +157,6 @@ const EditFixedAssets = (props) => {
           <Grid item xs={10}>
             <TextField
               id={3}
-              label="Amount"
               sx={{ width: 300 }}
               variant="outlined"
               value={data.Amount}

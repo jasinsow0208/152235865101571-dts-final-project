@@ -10,7 +10,6 @@ import { useParams } from "react-router-dom";
 const EditPage = () => {
   const [fixedAsset, setFixedAsset] = useState({});
   let params = useParams();
-  console.log(params.id);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +28,7 @@ const EditPage = () => {
 
     fetchData();
     console.log("Dari EditPage:", fixedAsset);
-  }, [fixedAsset]); // eslint-disable-line
+  }, []); // eslint-disable-line
   return (
     <>
       <NavBar />

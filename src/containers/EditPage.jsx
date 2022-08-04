@@ -17,7 +17,7 @@ const EditPage = () => {
       try {
         const response = await Axios({
           method: "get",
-          url: `http://jasinsowandi-001-site5.btempurl.com/api/values/${params.id}`,
+          url: `https://famanagement.azurewebsites.net/api/Values/${params.id}`,
           withCredentials: false,
         });
 

@@ -28,9 +28,27 @@ const EditFixedAssets = (props) => {
   const loc = ["Cianjur", "Cikampek", "Jakarta", "Pontianak", "Surabaya"];
 
   useEffect(() => {
-    setData(props.Data);
-    console.log("Data:", data);
-  }, [props.Data]); // eslint-disable-line
+    const fetchData = async () => {
+      try {
+        const response = await Axios({
+          method: "get",
+          url: `https://famanagement.azurewebsites.net/api/Values/${props.Data}`,
+          withCredentials: false,
+        });
+
+        setData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []); // eslint-disable-line
+
+  // useEffect(() => {
+  //   setData(props.Data);
+  //   console.log("Data:", data);
+  // }, [props.Data]); // eslint-disable-line
 
   useEffect(() => {
     setCode(data.FixedAssetCode);
@@ -44,7 +62,7 @@ const EditFixedAssets = (props) => {
     // console.log("Location", location);
     // console.log("Amount", amount);
     // console.log("Purchase Date", purchaseDate);
-  }, []); // eslint-disable-line
+  }, [data]); // eslint-disable-line
 
   const btnOnClickCancelHandler = () => {
     navigate("/");
